@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Microsoft Planetary Computer - KSU Guest Lecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Microsoft Planetary Computer";
+        var mkdocs_page_input_path = "ms-planetary-computer\\index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> KSU Guest Lecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SpatioTemporal Asset Catalog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stac/stac/">STAC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stac/stac-browser/">Stac-Browser</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">STAC with Desktop GIS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../desktop-gis/qgis/">QGIS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desktop-gis/arcgis-pro/">ArcGIS Pro</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excercise</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../palisades/">Palisades</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Resources</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../aws-open-data/">Registry for Open Data on AWS</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Microsoft Planetary Computer</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#set-up-a-stac-connection-to-one-of-the-mpc-catalogs">Set up a STAC Connection to one of the MPC Catalogs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-stac-connection">Create STAC Connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#leveraging-radiant-earths-stac-browser">Leveraging Radiant Earth's Stac-Browser</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">KSU Guest Lecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Resources</li>
+      <li class="breadcrumb-item active">Microsoft Planetary Computer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="microsoft-planetary-computer-mpc">Microsoft Planetary Computer (MPC)</h1>
+<p>The Microsoft Planetary Computer <a href="https://planetarycomputer.microsoft.com/catalog">Data Catalog</a> is an excellent resource for accessing STAC Catalogs.  This page is for introduction only to expose you to more STAC resources.**</p>
+<p><em>*</em>At the moment, access and download is free, but Microsoft has indicated they will start charging for egress charges ($0.03 - $0.05 per unit).*</p>
+<p>If you are part of an organization with access to Azure, checkout <a href="https://doc.arcgis.com/en/microsoft-planetary-computer/latest/get-started/configure-arcgis-for-microsoft-planetary-computer.htm">Configure Arcgis for Microsoft Planetary Computer</a>.</p>
+<h2 id="set-up-a-stac-connection-to-one-of-the-mpc-catalogs">Set up a STAC Connection to one of the MPC Catalogs</h2>
+<ol>
+<li>On the Data Catalog page, click <em>Sentinel 1 Level-1 Ground Range Detected (GRD)</em>.  </li>
+<li>Under <em>STAC Collection</em>, click on the STAC Catalog link.</li>
+<li>Scroll to the bottom until you see a section that looks like this:</li>
+</ol>
+<pre><code class="language-json">  &quot;stac_version&quot;: &quot;1.0.0&quot;,
+  &quot;msft:group_id&quot;: &quot;sentinel-1&quot;,
+  &quot;msft:container&quot;: &quot;s1-grd&quot;,
+  &quot;stac_extensions&quot;: [
+    &quot;https://stac-extensions.github.io/sar/v1.0.0/schema.json&quot;,
+    &quot;https://stac-extensions.github.io/sat/v1.0.0/schema.json&quot;,
+    &quot;https://stac-extensions.github.io/item-assets/v1.0.0/schema.json&quot;,
+    &quot;https://stac-extensions.github.io/table/v1.2.0/schema.json&quot;
+  ],
+  &quot;msft:storage_account&quot;: &quot;sentinel1euwest&quot;,
+  &quot;msft:short_description&quot;: &quot;Sentinel-1 Level-1 Ground Range Detected (GRD) products consist of focused SAR data that has been detected, multi-looked and projected to ground range using an Earth ellipsoid model.&quot;,
+  &quot;msft:region&quot;: &quot;westeurope&quot;
+</code></pre>
+<ol>
+<li>Keep this information handy.  You will need the <em>"msft:container</em>, <em>msft:container", and </em>msft:region* information.</li>
+<li>In ArcGIS Pro, create a *Cloud Storage Connection.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Json Value</th>
+<th>ACS Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>msft:storage_account</td>
+<td>Access Key ID (Account Name)</td>
+</tr>
+<tr>
+<td>msft:container</td>
+<td>bucket</td>
+</tr>
+<tr>
+<td>msft:region</td>
+<td>region</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>ARC_TOKEN_OPTION NAME</td>
+<td>AZURE_STORAGE_SAS_TOKEN</td>
+</tr>
+<tr>
+<td>ARC_TOKEN_SERVICE_API</td>
+<td>see #6</td>
+</tr>
+<tr>
+<td>ARC_DEEP_CRAWL</td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>ARC_TOKEN_SERVICE_API</p>
+<ul>
+<li>https://planetarycomputer.microsoft.com/api/sas/v1/token/{storage_account}/{container}  </li>
+</ul>
+</li>
+<li>
+<p>Click ok.  If it doesn't work, we can still set up the Connection and Search for items.</p>
+</li>
+</ol>
+<h2 id="create-stac-connection">Create STAC Connection</h2>
+<ol>
+<li>Insert a <em>New STAC Connnection</em></li>
+<li>Call in *MS-Planetary-Computer</li>
+<li>API URL: <code>https://planetarycomputer.microsoft.com/api/stac/v1/</code></li>
+<li>Search for data by date and area of interest.</li>
+</ol>
+<h2 id="leveraging-radiant-earths-stac-browser">Leveraging Radiant Earth's Stac-Browser</h2>
+<ol>
+<li>Go to the Stac-browser: <code>https://radienteaerth.github.io/stac-browser/#</code></li>
+<li>Paste in the STAC Collection URL we got from the Planetary Computer Sentinel-1 GRD overview page.</li>
+<li>Grab the ID from ArcGIS Pro to use to search for the item.</li>
+<li>Download</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../aws-open-data/" class="btn btn-neutral float-left" title="Registry for Open Data on AWS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../aws-open-data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

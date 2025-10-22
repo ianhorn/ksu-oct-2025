@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Palisades - KSU Guest Lecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Palisades";
+        var mkdocs_page_input_path = "palisades\\index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> KSU Guest Lecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SpatioTemporal Asset Catalog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stac/stac/">STAC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stac/stac-browser/">Stac-Browser</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">STAC with Desktop GIS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../desktop-gis/qgis/">QGIS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desktop-gis/arcgis-pro/">ArcGIS Pro</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excercise</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Palisades</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../aws-open-data/">Registry for Open Data on AWS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ms-planetary-computer/">Microsoft Planetary Computer</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">KSU Guest Lecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excercise</li>
+      <li class="breadcrumb-item active">Palisades</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="palisades-fire">Palisades Fire</h1>
+<p>This exercise explores the European Space Agency's <a href="https://documentation.dataspace.copernicus.eu/APIs/STAC.html">Copernicus Data Space Ecosystem STAC API</a>.  Copernicus data is free to abtain, but still requires a login.  Because that takes time to set up, we will query the catalog for data.  I have provided layerfiles for us to use.  </p>
+<p>Copernicus Browser  <code>https://browser.dataspace.copernicus.eu/</code></p>
+<p>Set up a stac connection in your project. <code>https://stac.dataspace.copernicus.eu/v1/</code>  </p>
+<p>Zoom in to the Palisades/Malibu area northwest of Los Angeles.  In the project File Geodatabase, I have provided an area of interest. </p>
+<p align="center">
+    <img src="assets/aoi.png" width="700" height="auto" />
+    <figcaption><strong>Figure 1.</strong>   Rough area of interest for the palisades fire.</figcaption>
+</p>
+
+<p>For pre-fire, set your temporal extent to 2025-12-10 through 2025-12-31.  When you view your results, click the info button and review the metadata.  Look for cloud cover percentage.  </p>
+<p>Repeat the same for post-fire with date range of 2025-02-01 through 2025-02-10.   </p>
+<p align="center">
+    <img src="assets/layerfiles.png" width="400" height:"auto" />
+    <figcaption><strong>Figure 2.</strong>  Sentinel-2 layerfiles.</figcaption>
+</p>
+
+<p>Notice how the downloads have a separate image for each band.  We are going to create several raster functions using the <em>Raster Calculator</em> and <em>Band Conmbination</em> function.</p>
+<table>
+<thead>
+<tr>
+<th>Visualization</th>
+<th>Band Combination*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Burned Area</td>
+<td>B12, B11, B4</td>
+</tr>
+<tr>
+<td>Fire vs. Vegetation</td>
+<td>B11, B8, B4</td>
+</tr>
+<tr>
+<td>Ash and Burn Severity</td>
+<td>B12, B8A, B4</td>
+</tr>
+<tr>
+<td>NBR: Normalized Burn Ratio</td>
+<td>(B8-B12)/(B8+B12)</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>Further reading on <a href="https://gisgeography.com/sentinel-2-bands-combinations/">Sentinel 2 Bands and Combinations</a>.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../desktop-gis/arcgis-pro/" class="btn btn-neutral float-left" title="ArcGIS Pro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../aws-open-data/" class="btn btn-neutral float-right" title="Registry for Open Data on AWS">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../desktop-gis/arcgis-pro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../aws-open-data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
