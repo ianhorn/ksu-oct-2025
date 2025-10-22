@@ -27,4 +27,5 @@ Lib
 venv/Lib/site-packages
 *.lyrx
 layerfiles
-*.astac
+.ipynb_checkpoints
+*.crf
